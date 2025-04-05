@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+    background-color: #F8F9FA;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #5F30E2;
+    padding: 16px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1024px;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.2), 0 15px 40px rgba(166, 173, 201, 0.3);
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.1), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.item .inner h2 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.item .inner p {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.1), 0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+    background: #F5F1FF;
+    border: 2px solid #9475EA;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 18px;
+    outline: none;
+    width: 100%;
+}
+
+.btn-submit {
+    align-self: flex-end;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: #5F30E2;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: #4b24b8;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.check-button, .trash-button, .undo-button {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.check-button {
+    background-image: url('../assets/check-outline.svg');
+}
+
+.check-button:hover {
+    background-image: url('../assets/check-solid.svg');
+}
+
+.trash-button {
+    background-image: url('../assets/trash-outline.svg');
+    margin-left: 16px;
+}
+
+.trash-button:hover {
+    background-image: url('../assets/trash-fill.svg');
+}
+
+.undo-button {
+    background-image: url('../assets/undo-outline.svg');
+    margin-left: 16px;
+}
+
+.undo-button:hover {
+    background-image: url('../assets/undo-solid.svg');
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-group {
+        margin-top: 10px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
